@@ -96,7 +96,9 @@ export function polyfill () {
       }
 
       return key;
-    }
+    },
+    configurable: true,
+    enumerable: true
   };
   Object.defineProperty(KeyboardEvent.prototype, 'key', proto);
   return proto;
